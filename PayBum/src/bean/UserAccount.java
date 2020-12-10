@@ -1,41 +1,63 @@
 package bean;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class UserAccount
- */
-@WebServlet("/UserAccount")
-public class UserAccount extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UserAccount() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+import java.util.ArrayList;
+import java.util.List;
+ 
+public class UserAccount {
+	
+	private int userId;
+	private String userName;
+	private String password;
+	
+	private List<String> roles;
+ 
+	public UserAccount() {
+ 
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	public UserAccount(int userId, String userName, String password, String... roles) {
+		this.userId = userId;
+		this.userName = userName;
+		this.password = password;
+		
+		this.roles = new ArrayList<String>();
+	      if (roles != null) {
+	         for (String r : roles) {
+	            this.roles.add(r);
+	         }
+	      }		
 	}
-
+	
+	public int getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	 
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}	     
+	
+	public List<String> getRoles() { 
+		return roles;
+	}
+	
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
 }
