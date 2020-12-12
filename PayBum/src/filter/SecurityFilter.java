@@ -1,6 +1,5 @@
 package filter;
 
-import java.io.Console;
 import java.io.IOException;
 import java.util.List;
  

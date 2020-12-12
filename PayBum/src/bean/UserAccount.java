@@ -6,7 +6,6 @@ import java.util.List;
  
 public class UserAccount {
 	
-	private int userId;
 	private String userName;
 	private String password;
 	
@@ -16,8 +15,7 @@ public class UserAccount {
  
 	}
 
-	public UserAccount(int userId, String userName, String password, String... roles) {
-		this.userId = userId;
+	public UserAccount(String userName, String password, String... roles) {
 		this.userName = userName;
 		this.password = password;
 		
@@ -27,14 +25,6 @@ public class UserAccount {
 	            this.roles.add(r);
 	         }
 	      }		
-	}
-	
-	public int getUserId() {
-		return userId;
-	}
-	
-	public void setUserId(int userId) {
-		this.userId = userId;
 	}
 	
 	public String getUserName() {

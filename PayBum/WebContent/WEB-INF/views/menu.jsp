@@ -6,10 +6,6 @@
   Admin page
 </a>
 ||
-<a href="${pageContext.request.contextPath}/userInfo">
-  User Info
-</a>
-||
 <a href="${pageContext.request.contextPath}/login">
   Login
 </a>

@@ -2,15 +2,13 @@
 <html>
    <head>
       <meta charset="UTF-8">
-      <title>Employee Task</title>
+      <title>User Task</title>
    </head>
    <body>
    
       <jsp:include page="menu.jsp"></jsp:include>
        
-      <h3>Employee Task</h3>
-       
-      Hello, This is a protected page!
-       
+      <jsp:include page="cardsView.jsp"></jsp:include>
+                  
    </body>
 </html>
